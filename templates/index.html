@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jigglypuff-Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="main-container">
+      <div id="formContainer">
+        <form id="queryForm" autocomplete="off">
+          <div class="search-wrapper">
+            <input type="text" placeholder="Find Song..." id="queryInput" autocomplete="off">
+            <input type="submit" id="submitBtn" value="Play">
+          </div>
+          <div id="suggestionBox">
+            <select id="dropDown" size="5"></select>
+          </div>
+        </form>
+      </div>
+
+      <div class="song-header">
+        <div class="song-info">
+          <h1>Jigglypuff: Web</h1><br>
+          <p id="nowPlaying" class="subtitle">Songs</p><br>
+          <button class="navBTN" id="clearq">🗑️ Clear Queue</button>
+          <button class="navBTN" id="themeToggle">🌓</button>
+        </div>
+        <button class="big-play-btn play-btn">&#9658;</button>
+      </div>
+
+      <div id="queueContainer">
+        <div class="song-list"></div>
+      </div>
+    </div>
+
+    <div id="audioContainer" class="audio-container">
+      <div class="player-info">
+        <h1 class="player-title">No song playing</h1>
+      </div>
+      <div class="player-buttons">
+        <button class="control-btn prev-btn" id="prevBtn">&#9664;</button>
+        <div class="progress-container">
+          <input type="range" id="progressBar" step="0.1" value="0">
+        </div>
+        <button class="control-btn next-btn" id="nextBtn">&#9654;</button>
+        <button class="control-btn" id="removeBtn" title="Remove Current Song">❌</button>
+        <button class="control-btn like-btn">&#9829;</button>
+        <button class="control-btn" id="loopBtn" title="Loop Playlist">&#x21A6;</button>
+      </div>
+    </div>
+
+    <audio autoplay controls id="audioPlayer" style="display:none"></audio>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
