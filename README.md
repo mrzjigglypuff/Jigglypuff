@@ -78,14 +78,14 @@ http://localhost:5000/
 
 Want to run this on your Android phone using Termux? Follow these simple steps to set it up:
 
-### 📥 1. Install Termux (Safe APK)
+1. Install Termux (Safe APK)
 
 Download the **latest working APK** of Termux:
 - 👉 [Download Termux 118 APK](https://github.com/AndronixApp/termux-releases/blob/main/Releases/Termux_118/com.termux_118.apk?raw=true)
 
 After installation, open the Termux app.
 
-### 🧰 2. Update Termux and Install Packages
+2. Update Termux and Install Packages
 
 Run these commands inside Termux to update and install the required tools:
 
@@ -95,7 +95,7 @@ pkg install -y python git
 pkg clean
 ```
 
-### 🐍 3. Install Python Dependencies
+3. Install Python Dependencies
 
 ```bash
 pip install flask yt_dlp
@@ -106,7 +106,7 @@ If `yt_dlp` fails, update it:
 pip install -U yt-dlp
 ```
 
-### 🔁 4. Clone and Run the Project
+4. Clone and Run the Project
 
 ```bash
 git clone https://github.com/MrzCruz/Jigglypuff-Web.git
